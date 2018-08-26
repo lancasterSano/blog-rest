@@ -10,8 +10,7 @@ class CategoryController extends Controller
     public function index()
     {
         if (!Cache::has('categories')) {
-            $categories = Category::all();
-            Cache::forever('categories', $categories);
+            Cache::forever('categories', Category::all());
         }
         return Cache::get('categories');
     }

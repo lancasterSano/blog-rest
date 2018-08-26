@@ -13,7 +13,7 @@ Rest api for creating blog posts, getting them as well as deleting and updating 
 5. Now go inside vagrant machine `vagrant ssh`
 6. Create db tables with migration command (inside vagrant!) `php code/artisan migrate`
 7. Then populate categories table with some data `php code/artisan db:seed` (also inside vagrant!)
-8. Done, you can now see the list of categories `GET /api/categories` and query another endpoints
+8. Done, you can now see the list of categories `GET /api/categories` and query another endpoints (see host in Homestead.yaml)
 
 ## Supported endpoints
 

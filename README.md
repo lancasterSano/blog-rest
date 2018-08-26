@@ -15,7 +15,7 @@ Rest api for creating blog posts, getting them as well as deleting and updating 
 7. Then populate categories table with some data `php code/artisan db:seed` (also inside vagrant!)
 8. Done, you can now see the list of categories `GET /api/categories` and query another endpoints
 
-##Supported endpoints
+## Supported endpoints
 
 `GET /api/categories`
 

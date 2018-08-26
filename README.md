@@ -1,7 +1,7 @@
 # Blog Rest
 Rest api for creating blog posts, getting them as well as deleting and updating them.
 
-##Pre-requisites
+## Pre-requisites
 - composer is set up globally
 - php is also installed
 

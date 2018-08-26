@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -19,6 +20,11 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), Post::RULES);
+        if($validator->fails()){
+            return response()->json(['errors' => $validator->errors()])->setStatusCode(400);
+        }
+
         $post = Post::create($request->all());
 
         return response()->json($post, 201);
@@ -26,6 +32,11 @@ class PostController extends Controller
 
     public function update(Request $request, Post $post)
     {
+        $validator = Validator::make($request->all(), Post::RULES);
+        if($validator->fails()){
+            return response()->json(['errors' => $validator->errors()])->setStatusCode(400);
+        }
+
         $post->update($request->all());
 
         return response()->json($post, 200);
